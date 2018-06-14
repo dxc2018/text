@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.pms</groupId>
+    <artifactId>Pmsystem</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <groupId>com.pms</groupId>
+  <artifactId>pms-web</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>pms-web Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+  
+  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    
+ 
+  	
+  	<!--工具模块依赖 -->
+  	<dependency>
+	  	<groupId>cn.qznetwork</groupId>
+	    <artifactId>qzkj-util</artifactId>
+	</dependency>
+	   
+    <!--基础模块依赖-->
+  	<dependency>
+	  	<groupId>cn.qznetwork</groupId>
+	    <artifactId>qzkj-common</artifactId>
+  	</dependency> 
+  	
+  		<!--业务核心模块依赖-->
+    <dependency>
+	  	<groupId>com.pms</groupId>
+	    <artifactId>pms-service</artifactId>
+	</dependency>
+	
+	<!-- spring开始 -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-web</artifactId>
+	</dependency>
+	    
+	<dependency>   
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-beans</artifactId>
+	</dependency>
+	<!-- spring结束 -->
+	  
+	<!-- json解析 -->
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>fastjson</artifactId>
+	</dependency>
+	  
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-api</artifactId>
+	</dependency>
+	      
+	<!--scope也可以继承-->
+	<dependency>       
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-war-plugin</artifactId>
+	</dependency>
+	  
+	<dependency>
+	    <groupId>commons-collections</groupId>
+	    <artifactId>commons-collections</artifactId>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.apache.cxf</groupId>
+	    <artifactId>cxf-rt-transports-http</artifactId>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.apache.cxf</groupId>
+	    <artifactId>cxf-rt-frontend-jaxws</artifactId>
+	</dependency> 
+     
+  </dependencies>
+  
+  
+  
+  
+  
+  
+  <build>
+  <finalName>pms-web</finalName>
+   		<plugins>
+   			<plugin>   
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-war-plugin</artifactId>
+	        <configuration>
+	        <packagingExcludes>WEB-INF/web.xml</packagingExcludes>
+	          <overlays>   
+	            <overlay>    
+	              <groupId>com.agrinfo</groupId>
+  				  <artifactId>pms-controller</artifactId>
+	            </overlay>     
+	          </overlays>
+	        </configuration>
+	      </plugin>
+   		</plugins>
+  
+  
+    
+  </build>
+</project>

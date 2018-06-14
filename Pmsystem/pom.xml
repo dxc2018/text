@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.pms</groupId>
+  <artifactId>Pmsystem</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+   <modules>
+  	<module>pms-dao</module>
+  	<module>pms-service</module>
+    <module>pms-web</module>
+    <module>pms-controller</module>
+  </modules>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <pro.junit>4.1</pro.junit>
+  	<pro.spring>4.0.5.RELEASE</pro.spring>
+  	<!--old version is 3.2.8-->
+  	<pro.mybatis>3.2.8</pro.mybatis>  
+  	<!--old version is 1.2.2-->
+  	<pro.mybatis.spring>1.2.2</pro.mybatis.spring>
+  	<pro.mysql>5.1.18</pro.mysql>   
+  	<pro.logback>1.1.2</pro.logback>  
+  	<pro.aspectj>1.8.4</pro.aspectj>  
+  	<pro.shiro>1.3.2</pro.shiro>  
+  	<pro.cxf>3.1.4</pro.cxf>
+  	<pro.spring.data.mongo>1.8.2.RELEASE</pro.spring.data.mongo>
+  	<pro.ehcache>2.9.0</pro.ehcache>   
+  	<pro.commons.io>2.4</pro.commons.io>
+  	<pro.commons.fileupload>1.3.1</pro.commons.fileupload>
+  	<pro.commons.lang>3.4</pro.commons.lang>
+  	<pro.jpush>3.2.9</pro.jpush>
+  	<pro.httpclient>4.3.6</pro.httpclient>
+  	<pro.druid>1.0.16</pro.druid>
+  	<pro.fastjson>1.2.7</pro.fastjson>  
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	<pro.fastdfs.java>1.25</pro.fastdfs.java>
+  	<pro.servlet>3.0.1</pro.servlet>
+  	<maven.compiler.version>2.3.2</maven.compiler.version>
+  	<jdk.version>1.7</jdk.version>
+  	<maven.source.plugin>2.4</maven.source.plugin>
+  	<maven.war.plugin>2.4</maven.war.plugin>
+  	<pro.slf4j>1.6.6</pro.slf4j>  
+  	<pro.alipay>1.0.0</pro.alipay>
+  	<pro.common.collections>3.2.2</pro.common.collections>
+  	<pro.pinyin>20170307</pro.pinyin> 
+  	<pro.redis>2.9.0</pro.redis>
+  	<pro.commons.httpclient>3.0.1</pro.commons.httpclient>
+  	<pro.http.mime>4.3.5</pro.http.mime>
+  	<pro.bcp>2017.1.7</pro.bcp>  
+  	<pro.thumbnailator>0.4.8</pro.thumbnailator>
+  	<pro.pagehelper>4.1.6</pro.pagehelper>
+  	<pro.sqlserver>4.0</pro.sqlserver>
+  	<pro.page.fix>1.0</pro.page.fix>
+  	<pro.hibernate-validator>5.1.3.Final</pro.hibernate-validator>
+  	<pro.jms>1.1</pro.jms>
+  	<pro.poi>3.10.1</pro.poi>
+  	<pro.aliyuncs>1.0.0</pro.aliyuncs>
+  	<pro.aliyun>3.3.1</pro.aliyun>
+  </properties>
+  
+   <dependencyManagement>
+  <dependencies>
+  
+  	<!-- 模块依赖管理 -->
+	<dependency>
+	  	<groupId>cn.qznetwork</groupId>
+		<artifactId>qzkj-util</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  
+    <dependency>
+	  	<groupId>cn.qznetwork</groupId>
+		<artifactId>qzkj-common</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	
+  	<dependency>
+	  	<groupId>com.pms</groupId>
+        <artifactId>pms-dao</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	
+  	<dependency>
+	  	<groupId>com.pms</groupId>
+        <artifactId>pms-service</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	
+  	<dependency>
+	  	<groupId>com.pms</groupId>
+        <artifactId>pms-web</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  <!-- 模块依赖结束 -->
+  
+	<!--junit测试�?-->
+	<dependency>
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>${pro.junit}</version>  
+	    <scope>test</scope>
+	</dependency>
+	
+	<!-- spring�?�? -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-core</artifactId>
+	    <version>${pro.spring}</version>
+	</dependency>
+	
+	<dependency>   
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context</artifactId>
+	    <version>${pro.spring}</version>
+	</dependency>
+	     
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-beans</artifactId>
+	    <version>${pro.spring}</version>
+	</dependency>
+	   
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-web</artifactId>
+	    <version>${pro.spring}</version>
+	</dependency>
+	  
+	<dependency>   
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>${pro.spring}</version>
+	</dependency>
+	  
+	<dependency>    
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aop</artifactId>
+	    <version>${pro.spring}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context-support</artifactId>
+	    <version>${pro.spring}</version>
+	</dependency>
+	   
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-tx</artifactId>
+	    <version>${pro.spring}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jdbc</artifactId>
+	    <version>${pro.spring}</version>
+	</dependency>
+	<!-- spring结束 -->
+	
+	<!-- mybatis�?�? -->
+	<dependency>  
+	    <groupId>org.mybatis</groupId>
+	    <artifactId>mybatis</artifactId>
+	    <version>${pro.mybatis}</version>
+	</dependency>
+	    
+	<dependency>
+	    <groupId>org.mybatis</groupId>
+	    <artifactId>mybatis-spring</artifactId>
+	    <version>${pro.mybatis.spring}</version>
+	</dependency>
+	<!-- mybatis结束 -->
+	
+	<!-- 数据库驱�? 及数据库连接池开�?-->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>${pro.mysql}</version>
+	</dependency>
+	
+	<dependency>     
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>druid</artifactId>
+	    <version>${pro.druid}</version>
+	</dependency>
+	<!-- 数据库驱�? 及数据库连接池结�?-->
+	
+	<!-- 日志框架logback�?�? -->
+	<dependency>
+	    <groupId>ch.qos.logback</groupId>
+	    <artifactId>logback-classic</artifactId>  
+	    <version>${pro.logback}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>ch.qos.logback</groupId>
+	    <artifactId>logback-access</artifactId>
+	    <version>${pro.logback}</version>
+	</dependency>
+	<!-- logback结束 -->
+	
+	<!-- aspectj�?�? -->
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjrt</artifactId>
+	    <version>${pro.aspectj}</version>
+	</dependency>
+		  
+	<dependency>  
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjweaver</artifactId>
+	    <version>${pro.aspectj}</version>   
+	</dependency>
+	<!-- aspectj结束 -->
+	
+	<dependency>
+	    <groupId>net.sf.json-lib</groupId>
+	    <artifactId>json-lib</artifactId>
+	    <version>2.3</version>
+	    <classifier>jdk15</classifier>
+	</dependency>
+	
+	<!-- shiro�?�? -->
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-core</artifactId>
+	    <version>${pro.shiro}</version>
+	</dependency>
+		
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-spring</artifactId>
+	    <version>${pro.shiro}</version>
+	</dependency>  
+	
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-ehcache</artifactId>
+	    <version>${pro.shiro}</version>
+	</dependency>    
+		
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-quartz</artifactId>
+	    <version>${pro.shiro}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-web</artifactId>
+	    <version>${pro.shiro}</version>
+	</dependency>
+	<!-- shiro结束 -->
+	
+	<!-- webservice框架�?�? -->
+	<dependency>
+	    <groupId>org.apache.cxf</groupId>
+	    <artifactId>cxf-rt-transports-http</artifactId>
+	    <version>${pro.cxf}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.apache.cxf</groupId>
+	    <artifactId>cxf-rt-frontend-jaxws</artifactId>
+	    <version>${pro.cxf}</version>
+	</dependency> 
+	<!-- webservice框架结束 -->
+	
+	<!-- mongodb�?�? -->
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-mongodb</artifactId>
+	    <version>${pro.spring.data.mongo}</version>
+	</dependency>
+	<!-- mongodb结束 -->
+	
+	<!-- ehcache缓存 -->
+	<dependency>  
+	    <groupId>net.sf.ehcache</groupId>
+	    <artifactId>ehcache</artifactId>
+	    <version>${pro.ehcache}</version>
+	</dependency>
+	
+	<!-- httpclient-->
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpclient</artifactId>
+	    <version>${pro.httpclient}</version>
+	</dependency>
+	
+	<!-- commons系列�?�? -->  
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-lang3</artifactId>
+	    <version>${pro.commons.lang}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>${pro.commons.io}</version>
+	</dependency>
+	    
+	<dependency>
+	    <groupId>commons-fileupload</groupId>
+	    <artifactId>commons-fileupload</artifactId>
+	    <version>${pro.commons.fileupload}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>commons-httpclient</groupId>
+	    <artifactId>commons-httpclient</artifactId>
+	    <version>${pro.commons.httpclient}</version>
+	</dependency>
+	    
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpmime</artifactId>
+	    <version>${pro.http.mime}</version>
+	</dependency>
+	  
+	<!-- commons系列结束 -->
+	      
+	<!-- jpush极光推送 -->
+	<dependency>
+	    <groupId>cn.jpush.api</groupId>
+	    <artifactId>jpush-client</artifactId>
+	    <version>${pro.jpush}</version>
+	</dependency>
+	   
+	<!-- json解析 -->
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>fastjson</artifactId>
+	    <version>${pro.fastjson}</version>
+	</dependency>
+	
+	 <!--文件增�?�删、查 -->   
+	<dependency>      
+	    <groupId>org.csource</groupId>
+	    <artifactId>fastdfs-client-java</artifactId>
+	    <version>${pro.fastdfs.java}</version>
+	</dependency>
+	  
+	<!-- srevlet Api -->
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>${pro.servlet}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-war-plugin</artifactId>
+	    <version>${maven.war.plugin}</version>
+	    <scope>provided</scope>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-api</artifactId>
+	    <version>${pro.slf4j}</version>
+	</dependency>
+	
+	<dependency>
+	  	<groupId>cn.qznetwork.qtms.alipay</groupId>
+	  	<artifactId>alipay-sdk</artifactId>
+	  	<version>${pro.alipay}</version>
+	</dependency>
+	
+	<dependency>
+	<groupId>com.aliyun</groupId>
+    <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+    <version>${pro.aliyuncs}</version>
+	</dependency>
+	
+	<dependency>
+	<groupId>com.aliyun</groupId>
+    <artifactId>aliyun-java-sdk-core</artifactId>
+    <version>${pro.aliyun}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>commons-collections</groupId>
+	    <artifactId>commons-collections</artifactId>
+	    <version>${pro.common.collections}</version>
+	</dependency>
+	
+	<!--汉字转拼音工具类-->
+	<dependency>
+	  <groupId>cn.qznetwork.kfw</groupId>
+	  <artifactId>pinyinutil</artifactId>
+	  <version>${pro.pinyin}</version>
+	</dependency>
+	  
+	<!--redis客户�?-->
+	<dependency>
+	    <groupId>redis.clients</groupId>
+	    <artifactId>jedis</artifactId>
+	    <version>${pro.redis}</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>cn.qzkj.common</groupId>
+	  <artifactId>bcprov</artifactId>
+	  <version>${pro.bcp}</version>
+	</dependency>
+	
+	<dependency>  
+	    <groupId>net.coobird</groupId>
+	    <artifactId>thumbnailator</artifactId>
+	    <version>${pro.thumbnailator}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.github.pagehelper</groupId>
+	    <artifactId>pagehelper</artifactId>
+	    <version>${pro.pagehelper}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-validator</artifactId>
+	    <version>${pro.hibernate-validator}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>javax.jms</groupId>
+	    <artifactId>jms</artifactId>
+	    <version>${pro.jms}</version>
+	</dependency>  
+	
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi</artifactId>
+	    <version>${pro.poi}</version>
+	</dependency>
+  </dependencies>     
+  </dependencyManagement>
+  
+  
+   <build>
+  	<pluginManagement>
+  		<plugins>   
+  			<plugin>        
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.version}</version>
+				<configuration>        
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>  
+					<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>${maven.source.plugin}</version>
+				<configuration>
+					<attach>true</attach>  
+				</configuration>  
+				<executions>       
+					<execution>   
+						<phase>compile</phase>
+						<goals>     
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>        
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${maven.war.plugin}</version>
+			</plugin>
+  		</plugins>
+  	</pluginManagement>
+  </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </reporting>
+ 
+</project>

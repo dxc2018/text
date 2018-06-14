@@ -1,0 +1,4 @@
+<configuration debug="false" scan="true" scanPeriod="60 seconds" >
+	 <contextName>AS-APPLICATION</contextName>
+  	<include resource="logback-profiles/logback-development.xml"/>
+</configuration>

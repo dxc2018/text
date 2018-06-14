@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.pms</groupId>
+    <artifactId>Pmsystem</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <groupId>com.pms</groupId>
+  <artifactId>pms-service</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>pms-service</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <!--数据持久层依赖-->
+  	<dependency>
+	  	<groupId>com.pms</groupId>
+	    <artifactId>pms-dao</artifactId>
+	</dependency>
+  	
+  	  <!--工具模块依赖-->
+  	<dependency>
+	  	<groupId>cn.qznetwork</groupId>
+	    <artifactId>qzkj-util</artifactId>
+	</dependency>  
+  	  
+  	<!--基础模块依赖-->
+  	<dependency>
+	  	<groupId>cn.qznetwork</groupId>
+	    <artifactId>qzkj-common</artifactId>
+	</dependency>  
+	
+		<!-- aspectj开始 -->
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjrt</artifactId>
+	</dependency>
+		  
+	<dependency>  
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjweaver</artifactId>
+	</dependency>
+	<!-- aspectj结束 -->
+  
+  	<!-- 日志框架logback开始 -->
+	<dependency>
+	    <groupId>ch.qos.logback</groupId>
+	    <artifactId>logback-classic</artifactId>  
+	</dependency>
+	
+	<dependency>
+	    <groupId>ch.qos.logback</groupId>
+	    <artifactId>logback-access</artifactId>
+	</dependency>
+	<!-- logback结束 -->
+	
+	<!-- shiro开始 -->
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-core</artifactId>
+	</dependency>
+		
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-spring</artifactId>
+	</dependency>  
+	
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-ehcache</artifactId>
+	</dependency>    
+		
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-quartz</artifactId>
+	</dependency>	
+		
+	<dependency>     
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-web</artifactId>
+	</dependency>   
+	<!-- shiro结束 -->   
+	
+	<!-- ehcache缓存 -->
+	<dependency>  
+	    <groupId>net.sf.ehcache</groupId>
+	    <artifactId>ehcache</artifactId>
+	</dependency>
+	
+	<!-- httpclient-->
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpclient</artifactId>
+	</dependency>
+	
+	<!-- commons系列开始 -->  
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-lang3</artifactId>
+	</dependency>
+	
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	</dependency>
+	    
+	<dependency>
+	    <groupId>commons-fileupload</groupId>
+	    <artifactId>commons-fileupload</artifactId>
+	</dependency>
+	<!-- commons系列结束 -->
+	
+	<!-- jpush推送 -->
+	<dependency>
+	    <groupId>cn.jpush.api</groupId>
+	    <artifactId>jpush-client</artifactId>
+	</dependency>
+	
+	<dependency>
+	<groupId>com.aliyun</groupId>
+    <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+	</dependency>
+	
+	<dependency>
+	<groupId>com.aliyun</groupId>
+    <artifactId>aliyun-java-sdk-core</artifactId>
+	</dependency>
+    
+    
+    
+  </dependencies>
+</project>
